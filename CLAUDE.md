@@ -4,14 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains a NeoMutt color scheme inspired by the Ubuntu Yaru color palette. NeoMutt is a command-line email client.
+This repository contains multiple NeoMutt color schemes. NeoMutt is a command-line email client.
 
 ## File Structure
 
-- `mutt-colors-ubuntu-yaru-256.neomuttrc` - Color scheme using 256-color mode with hex backgrounds
-- `mutt-colors-ubuntu-yaru-truecolor.neomuttrc` - Color scheme using true color (24-bit) hex values throughout
+Each color scheme lives in its own subdirectory:
 
-Both files style the same NeoMutt elements but differ in color specification format.
+- `yaru/` - Ubuntu Yaru-inspired color scheme (eggplant/aubergine tones)
+  - `mutt-colors-ubuntu-yaru-256.neomuttrc` - 256-color mode with hex backgrounds
+  - `mutt-colors-ubuntu-yaru-truecolor.neomuttrc` - True color (24-bit) hex values throughout
+- `duotone/` - Duotone color scheme (teal/turquoise with bright field green)
+  - `duotone.neomuttrc` - True color (24-bit) duotone theme based on Base2Tone Field Dark
 
 ## Ubuntu-Yaru Color Palette
 
@@ -44,16 +47,16 @@ Key objects styled: `normal`, `error`, `status`, `indicator`, `tree`, `sidebar_*
 
 Source in neomuttrc:
 ```
-source /path/to/mutt-colors-ubuntu-yaru-256.neomuttrc
+source /path/to/yaru/mutt-colors-ubuntu-yaru-256.neomuttrc
 ```
 
 For true color version, first enable direct color:
 ```
 set color_directcolor = yes
-source /path/to/mutt-colors-ubuntu-yaru-truecolor.neomuttrc
+source /path/to/yaru/mutt-colors-ubuntu-yaru-truecolor.neomuttrc
 ```
 
 Or run directly:
 ```
-neomutt -F /path/to/test-neomuttrc
+neomutt -F /path/to/yaru/mutt-colors-ubuntu-yaru-256.neomuttrc
 ```

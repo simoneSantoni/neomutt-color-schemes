@@ -1,8 +1,12 @@
-# Ubuntu Yaru Color Scheme for NeoMutt
+# NeoMutt Color Schemes
 
-A color scheme for [NeoMutt](https://neomutt.org/) inspired by the [Ubuntu Yaru](https://github.com/ubuntu/yaru) color palette, featuring the iconic eggplant/aubergine tones.
+A collection of color schemes for [NeoMutt](https://neomutt.org/), a command-line email client.
 
-## Features
+## Color Schemes
+
+### Yaru (`yaru/`)
+
+Inspired by the [Ubuntu Yaru](https://github.com/ubuntu/yaru) color palette, featuring the iconic eggplant/aubergine tones.
 
 - Full styling for all NeoMutt UI elements (index, sidebar, headers, compose view)
 - Distinct colors for message states (new, read, flagged, deleted)
@@ -13,7 +17,7 @@ A color scheme for [NeoMutt](https://neomutt.org/) inspired by the [Ubuntu Yaru]
   - **256-color** - Works in most terminals
   - **True color** - Uses exact hex values for terminals with 24-bit color support
 
-## Color Palette
+#### Color Palette
 
 | Color           | Hex       | Usage                          |
 |-----------------|-----------|--------------------------------|
@@ -26,36 +30,64 @@ A color scheme for [NeoMutt](https://neomutt.org/) inspired by the [Ubuntu Yaru]
 | Red             | `#C7162B` | Flagged, deleted, errors       |
 | Foreground      | `#F6F5F4` | Normal text                    |
 
-## Installation
+#### Installation
 
-### 256-color version
-
-Add to your `neomuttrc`:
+**256-color version** - add to your `neomuttrc`:
 
 ```neomuttrc
-source /path/to/mutt-colors-ubuntu-yaru-256.neomuttrc
+source /path/to/yaru/mutt-colors-ubuntu-yaru-256.neomuttrc
 ```
 
-### True color version
+**True color version** - requires a terminal with 24-bit color support:
+
+```neomuttrc
+set color_directcolor = yes
+source /path/to/yaru/mutt-colors-ubuntu-yaru-truecolor.neomuttrc
+```
+
+### Duotone (`duotone/`)
+
+A duotone theme featuring teal/turquoise with bright field green, based on [Base2Tone Field Dark](https://github.com/atelierbram/Base2Tone-kitty) by Bram de Haan.
+
+- True color only (requires 24-bit color support)
+- Teal-gray dark background with green/cyan accent tones
+- Full styling for all NeoMutt UI elements
+
+#### Color Palette
+
+| Color           | Hex       | Usage                          |
+|-----------------|-----------|--------------------------------|
+| Dark teal-gray  | `#18201e` | Background                     |
+| Teal            | `#0fbda0` | Primary accent, URLs, indicator|
+| Bright teal     | `#25d0b4` | Messages to me                 |
+| Cyan            | `#40ddc3` | Old messages, quoted text      |
+| Bright cyan     | `#88f2e0` | New/unread messages, subjects  |
+| Green           | `#3be381` | Tree, good signatures          |
+| Bright green    | `#55ec94` | Flagged messages, errors       |
+| Mint            | `#85ffb8` | Expired, search highlight      |
+| Foreground      | `#8ea4a0` | Normal text                    |
+
+#### Installation
 
 Requires a terminal with 24-bit color support. Add to your `neomuttrc`:
 
 ```neomuttrc
 set color_directcolor = yes
-source /path/to/mutt-colors-ubuntu-yaru-truecolor.neomuttrc
+source /path/to/duotone/duotone.neomuttrc
 ```
 
 ## Testing
 
-Test the color scheme without modifying your config:
+Test a color scheme without modifying your config:
 
 ```bash
-neomutt -F /path/to/mutt-colors-ubuntu-yaru-256.neomuttrc
+neomutt -F /path/to/yaru/mutt-colors-ubuntu-yaru-256.neomuttrc
 ```
 
 ## Credits
 
-Based on [yaru.nvim](https://github.com/simoneSantoni/yaru.nvim) by Simone Santoni.
+- Yaru scheme based on [yaru.nvim](https://github.com/simoneSantoni/yaru.nvim) by Simone Santoni.
+- Duotone scheme based on [Base2Tone-kitty](https://github.com/atelierbram/Base2Tone-kitty) by Bram de Haan.
 
 ## License
 
